@@ -1,0 +1,77 @@
+nohup: ignoring input
+{'resize': 0.25, 'batch_size': 8, 'train_mode': 'scene', 'matrics': 'mse', 'learning_rate': 0.0001, 'num_epochs': 50, 'grad_accum': True, 'batch_size_gpu': 1, 'data_augmentation': ['rot', 'flip'], 'encoder_channels': [32, 32, 64, 64, 64], 'decoder_channels': [64, 64, 64, 32, 32], 'waypoints': [44], 'feature_extract': True, 'segmentation_model': None, 'bbox_wh_model': 'pretrained_models/bbox_wh/pie_wh-72.pth', 'feature_classes': 6, 'temperature': 1.0, 'loss_scale': 1000, 'kernlen': 31, 'nsig': 4, 'clip_grad': False, 'max_norm': 20, 'use_TTST': True, 'rel_threshold': 0.002, 'use_CWS': False, 'CWS_params': {'sigma_factor': 6, 'ratio': 2, 'rot': True}}
+   frame  trackId       x  ...      h                 sceneId  metaId
+0  01027        0  923.00  ...  53.79  set01-video_0001-01027       0
+1  01027        0  927.23  ...  58.41  set01-video_0001-01027       0
+2  01027        0  930.87  ...  57.86  set01-video_0001-01027       0
+3  01027        0  934.51  ...  57.32  set01-video_0001-01027       0
+4  01027        0  938.92  ...  56.41  set01-video_0001-01027       0
+
+[5 rows x 8 columns]
+Preprocess data
+Prepare Dataset: 100%|██████████| 288832/288832 [01:43<00:00, 2792.67it/s]Prepare Dataset: 100%|██████████| 27976/27976 [00:33<00:00, 840.26it/s]Prepare Dataset: 100%|██████████| 8662/8662 [00:07<00:00, 1187.15it/s]
+
+Start training
+Epoch:   0%|          | 0/50 [00:00<?, ?it/s]
+Epoch 0: 
+Val CMSE: 185.5773468017578 
+Val CFMSE: 710.2952270507812
+Best Epoch 0: 
+Val CMSE: 185.5773468017578 
+Val CFMSE: 710.2952270507812
+Epoch:   2%|▏         | 1/50 [11:37:38<569:44:10, 41858.17s/it]
+Epoch 1: 
+Val CMSE: 105.84542083740234 
+Val CFMSE: 372.1241760253906
+Best Epoch 1: 
+Val CMSE: 105.84542083740234 
+Val CFMSE: 372.1241760253906
+Epoch:   4%|▍         | 2/50 [23:16:31<558:41:53, 41902.37s/it]
+Epoch 2: 
+Val CMSE: 149.0353240966797 
+Val CFMSE: 557.6465454101562
+Epoch:   6%|▌         | 3/50 [34:50:49<545:36:10, 41790.86s/it]
+Epoch 3: 
+Val CMSE: 105.03646850585938 
+Val CFMSE: 376.4571228027344
+Best Epoch 3: 
+Val CMSE: 105.03646850585938 
+Val CFMSE: 376.4571228027344
+Epoch:   8%|▊         | 4/50 [46:25:14<533:21:29, 41741.07s/it]
+Epoch 4: 
+Val CMSE: 121.20746612548828 
+Val CFMSE: 452.3363952636719
+Epoch:  10%|█         | 5/50 [57:59:47<521:27:28, 41716.63s/it]
+Epoch 5: 
+Val CMSE: 101.79898071289062 
+Val CFMSE: 358.38714599609375
+Best Epoch 5: 
+Val CMSE: 101.79898071289062 
+Val CFMSE: 358.38714599609375
+Epoch:  12%|█▏        | 6/50 [69:35:02<509:51:40, 41715.93s/it]
+Epoch 6: 
+Val CMSE: 101.65706634521484 
+Val CFMSE: 354.9957275390625
+Best Epoch 6: 
+Val CMSE: 101.65706634521484 
+Val CFMSE: 354.9957275390625
+Epoch:  14%|█▍        | 7/50 [81:09:29<498:05:00, 41700.02s/it]
+Epoch 7: 
+Val CMSE: 96.6214370727539 
+Val CFMSE: 341.43206787109375
+Best Epoch 7: 
+Val CMSE: 96.6214370727539 
+Val CFMSE: 341.43206787109375
+Epoch:  16%|█▌        | 8/50 [92:44:11<486:26:03, 41694.38s/it]
+Epoch 8: 
+Val CMSE: 102.74624633789062 
+Val CFMSE: 363.88482666015625
+Epoch:  18%|█▊        | 9/50 [104:17:56<474:36:11, 41672.46s/it]
+Epoch 9: 
+Val CMSE: 112.14120483398438 
+Val CFMSE: 419.4276123046875
+Epoch:  20%|██        | 10/50 [115:52:43<463:04:48, 41677.21s/it]
+Epoch 10: 
+Val CMSE: 113.59194946289062 
+Val CFMSE: 422.515869140625
+Epoch:  22%|██▏       | 11/50 [127:27:49<451:35:46, 41685.79s/it]

@@ -1,0 +1,63 @@
+resize: 0.25      # resize factor
+batch_size: 8
+train_mode: scene # [scene, trajectory]
+matrics: mse      # [ade, mse]
+eval_nll: False
+
+learning_rate: 0.0001
+num_epochs: 50
+
+# Use gradient accumulation to simulate batch_size
+grad_accum: True
+batch_size_gpu: 1
+
+data_augmentation:
+  - rot
+  - flip
+
+encoder_channels:  # list of channels in encoder
+  - 32
+  - 32
+  - 64
+  - 64
+  - 64
+
+decoder_channels:  # list of channels in decoder
+  - 64
+  - 64
+  - 64
+  - 32
+  - 32
+
+# list of selected goal and waypoints as timestep idx, e.g. 14 means the 14th future timestep is used as a waypoint,
+# last element is goal timestep
+waypoints:
+  - 44
+
+feature_extract: True
+segmentation_model: null # None
+bbox_wh_model: pretrained_models/bbox_wh/pie_wh-72.pth
+
+# [RGBImg: 3, segmentation: semantic_classes, feature_extract: out_dims]
+feature_classes: 6
+
+temperature: 1.0  # Control peakiness of heatmap
+loss_scale: 1000  # factor to scale the loss
+
+kernlen: 31  # (image) size of Gaussian kernel used for ground-truth Gaussian heatmap
+nsig: 4      # sigma of Gaussian kernel used for ground-truth Gaussian heatmap
+
+# clip grad norm
+clip_grad: False
+max_norm: 20
+
+# TTST
+use_TTST: True
+rel_threshold: 0.0001
+
+# CWS
+use_CWS: False
+CWS_params:
+  sigma_factor: 6
+  ratio: 2
+  rot: True

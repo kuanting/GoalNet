@@ -1,0 +1,11 @@
+tqdm==4.65.0
+pyyaml==6.0.1
+matplotlib==3.7.2
+torch==2.0.1 --find-links https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.15.2 --find-links https://download.pytorch.org/whl/torch_stable.html
+pandas==2.0.3
+opencv-python==4.8.0.74
+scipy==1.11.1
+pretrainedmodels==0.7.4
+efficientnet-pytorch==0.7.1
+#fvcore
