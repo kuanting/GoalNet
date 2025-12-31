@@ -19,3 +19,21 @@ https://arxiv.org/abs/2402.19002
 
 ## model_det
 GoalNet for deterministic trajectory prediction.
+
+## Cite Our Paper
+
+If you like our paper, please cite it
+
+```bibtex
+@ARTICLE{11079594,
+  author={Fadillah, Amar and Lee, Ching-Lin and Wang, Zhi-Xuan and Lai, Kuan-Ting},
+  journal={IEEE Access}, 
+  title={GoalNet: Goal Areas Oriented Pedestrian Trajectory Prediction}, 
+  year={2025},
+  volume={13},
+  number={},
+  pages={132537-132546},
+  keywords={Trajectory;Pedestrians;Predictive models;Autonomous vehicles;Uncertainty;Mathematical models;Accuracy;Neural networks;Laser radar;Cameras;Pedestrians;trajectory prediction;future trajectories},
+  doi={10.1109/ACCESS.2025.3588812}}
+```
+
